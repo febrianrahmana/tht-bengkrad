@@ -1,9 +1,11 @@
 # Take Home Test Bengkrad
 
-Febrian Rahman Adi
-18122019
+Febrian Rahman Adi  
+18122019  
 Powered by Svelte
 
+![Light mode](./static/light.png)
+![Dark mode](./static/dark.png)
 ## Developing
 
 Once you've installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
