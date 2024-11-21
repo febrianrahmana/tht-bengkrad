@@ -3,6 +3,7 @@
 	import { fade } from "svelte/transition";
     import lantik1 from "$lib/images/lantik1.webp"
     import lantik2 from "$lib/images/lantik2.webp"
+    import * as Carousel from "$lib/components/ui/carousel/index.js"
 </script>
 <div class="h-full content-center justify-center" transition:fade>
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-white text-center">
@@ -10,10 +11,10 @@
     </h1>
     <div class="grid grid-cols-2 gap-4 mx-10">
         <div class="flex content-center justify-center">
-            <img src={lantik1} alt="" class="object-contain">
+            <img loading="lazy" src={lantik1} alt="" class="object-contain">
         </div>
         <div>
-            <img src={lantik2} alt="" class="object-contain">
+            <img loading="lazy" src={lantik2} alt="" class="object-contain">
         </div>
     </div>
      <div class="mx-64 my-5">

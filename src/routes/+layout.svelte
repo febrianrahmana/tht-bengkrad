@@ -40,7 +40,7 @@
 <div class="app flex h-screen flex-col">
 	<header class="flex m-3">
 		<div class="corner">
-			<img src={imt} alt='Logo IMT "Signum" ITB'>
+			<img loading="lazy" src={imt} alt='Logo IMT "Signum" ITB'>
 		</div>
 		<div class="corner p-3">
 			<Switch on:click={toggleMode}/>

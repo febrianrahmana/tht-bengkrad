@@ -4,22 +4,32 @@
     import papan from "$lib/images/papan.webp";
     import kelas from "$lib/images/kelas.webp";
     import farras from "$lib/images/farras.webp";
+    import * as Carousel from "$lib/components/ui/carousel/index.js"
 
 </script>
 <div class="h-full content-center justify-center" transition:fade>
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-white text-center">
         3. Jangan tinggalin akademik!
     </h1>
-    <div class="grid grid-cols-3 gap-4 mx-10">
-        <div>
-            <img src={papan} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={kelas} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={farras} alt="" class="object-contain">
-        </div>
+    <div class="flex w-3/12 mx-auto">
+        <Carousel.Root opts={{
+            align: "center",
+            loop: "true",
+        }}>
+            <Carousel.Content>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={papan} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={kelas} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={farras} alt="" class="object-scale-down">
+                </Carousel.Item>
+            </Carousel.Content>
+            <Carousel.Previous />
+            <Carousel.Next />
+        </Carousel.Root>
     </div>
     <div class="mx-64 my-5">
         <p class="text-justify">&emsp;Di sela-sela ke-hectic-an Spektrum, gua juga tetep rajin buat akademik. Apalagi, saat itu lagi ikut SC Matrek IIA. Untungnya, banyak

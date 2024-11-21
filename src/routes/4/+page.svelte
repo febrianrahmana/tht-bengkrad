@@ -4,22 +4,32 @@
     import pusing from "$lib/images/pusing.webp"
     import kucing from "$lib/images/kucing.webp"
     import makan from "$lib/images/makan.webp"
+    import * as Carousel from "$lib/components/ui/carousel/index.js"
 
 </script>
 <div class="h-full content-center justify-center" transition:fade>
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-white text-center">
         4. The Last Straw
     </h1>
-    <div class="grid grid-cols-3 gap-4 mx-10">
-        <div>
-            <img src={pusing} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={kucing} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={makan} alt="" class="object-contain">
-        </div>
+    <div class="flex w-1/5 mx-auto">
+        <Carousel.Root opts={{
+            align: "center",
+            loop: "true",
+        }}>
+            <Carousel.Content>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={pusing} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={kucing} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={makan} alt="" class="object-scale-down">
+                </Carousel.Item>
+            </Carousel.Content>
+            <Carousel.Previous />
+            <Carousel.Next />
+        </Carousel.Root>
     </div>
     <div class="mx-64 my-5">
         <p class="text-justify">&emsp;
