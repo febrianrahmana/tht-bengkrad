@@ -7,8 +7,8 @@
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-white text-center">
         1. Permulaan
     </h1>
-        <div class="flex content-center justify-center">
-            <img src={awal} alt="">
+        <div class="flex w-3/12 m-auto">
+            <img loading="lazy" src={awal} alt="">
         </div>
      <div class="mx-64 my-5">
     <p class="text-justify">&emsp;Pada suatu hari, Belva mampir ke kos gua (kayanya abis numpang main ML). Terus, tiba-tiba Belva nyeletuk, “Feb, kalo gua

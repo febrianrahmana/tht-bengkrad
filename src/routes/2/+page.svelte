@@ -5,25 +5,35 @@
     import rapat2 from "$lib/images/rapat2.webp"
     import rapat3 from "$lib/images/rapat3.webp"
     import tragedi from "$lib/images/tragedi.webp"
+    import * as Carousel from "$lib/components/ui/carousel/index.js"
 
 </script>
 <div class="h-full content-center justify-center" transition:fade>
     <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight dark:text-white text-center">
         2. Rapat, Rapat, Rapat, dan Tragedi
     </h1>
-    <div class="grid grid-cols-4 gap-4 mx-10">
-        <div>
-            <img src={rapat1} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={rapat2} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={rapat3} alt="" class="object-contain">
-        </div>
-        <div>
-            <img src={tragedi} alt="" class="object-contain">
-        </div>
+    <div class="flex w-3/12 mx-auto">
+        <Carousel.Root opts={{
+            align: "center",
+            loop: "true",
+        }}>
+            <Carousel.Content>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={rapat1} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={rapat2} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={rapat3} alt="" class="object-scale-down">
+                </Carousel.Item>
+                <Carousel.Item class="content-center">
+                    <img loading="lazy" src={tragedi} alt="" class="object-scale-down">
+                </Carousel.Item>
+            </Carousel.Content>
+            <Carousel.Previous />
+            <Carousel.Next />
+        </Carousel.Root>
     </div>
     <div class="mx-64 my-5">
         <p class="text-justify">&emsp;Setelah itu, kami (hampir) setiap hari bertemu offline untuk rapat. Ga cuma sama divisi Mamet, kami juga ngobrol sama divisi lain buat nyari
